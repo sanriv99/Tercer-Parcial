@@ -25,7 +25,7 @@ namespace Repository.Repository
 
         public IEnumerable<ClienteModel> GetAllClientes()
         {
-            return _context.Clientes.ToList();
+            return _context.Clientes.Where(c => c.Estado == "Activo").ToList();
         }
 
         public ClienteModel GetClienteById(int id)
@@ -48,5 +48,11 @@ namespace Repository.Repository
                 _context.SaveChanges();
             }
         }
+
+        public ClienteModel ComprobarCI(string documento)
+        {
+            return _context.Clientes.FirstOrDefault(c => c.Documento == documento);
+        }
+       
     }
 }

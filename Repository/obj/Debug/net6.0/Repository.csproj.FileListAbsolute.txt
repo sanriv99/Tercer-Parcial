@@ -12,3 +12,4 @@ C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segun
 C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\Repository\obj\Debug\net6.0\Repository.pdb
 C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\Repository\obj\Debug\net6.0\Repository.genruntimeconfig.cache
 C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\Repository\obj\Debug\net6.0\ref\Repository.dll
+C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\Repository\obj\Debug\net6.0\Repository.sourcelink.json

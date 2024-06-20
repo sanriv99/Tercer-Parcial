@@ -13,3 +13,4 @@ C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segun
 C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\Service\obj\Debug\net6.0\refint\Service.dll
 C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\Service\obj\Debug\net6.0\Service.pdb
 C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\Service\obj\Debug\net6.0\ref\Service.dll
+C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\Service\obj\Debug\net6.0\Service.sourcelink.json

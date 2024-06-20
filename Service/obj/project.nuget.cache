@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RMelKpBRb/vSDI7m4MZ3OFK60kER9SZc3oIVxWzJETAUZekE+/8gTjRwCKKJ8tSlkB6Rwfg6dWGs1NLONs3QDQ==",
+  "dgSpecHash": "pUhs7CocJshPg/5WWuIMidKyzHLc/34WUDONJOTIORJVJvKgUqYJ1F10MhPzNT94q4gXbpfJssO7Pyt6TDBNaw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Santiago R\\Desktop\\Santi\\Ing. Informatica\\9° Semestre\\Optativo V\\Segundo Parcial\\Service\\Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Santiago R\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\Santiago R\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Santiago R\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Santiago R\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.30\\microsoft.entityframeworkcore.6.0.30.nupkg.sha512",
     "C:\\Users\\Santiago R\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.30\\microsoft.entityframeworkcore.abstractions.6.0.30.nupkg.sha512",
     "C:\\Users\\Santiago R\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.30\\microsoft.entityframeworkcore.analyzers.6.0.30.nupkg.sha512",

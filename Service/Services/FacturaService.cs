@@ -1,35 +1,46 @@
-﻿using Repository.Models;
-using System;
-using System.Collections.Generic;
+﻿using FluentValidation;
+using Repository.Data;
+using Repository.Models;
+using Repository.Repository;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-namespace Service.Services
+namespace Services
 {
     public class FacturaService
     {
-        public bool ValidateFactura(FacturaModel factura)
+        public class ValidarFacturaFluente : AbstractValidator<FacturaModel>
         {
-            return IsValidNumeroFactura(factura.Nro_Factura) &&
-                   AreTotalsValid(factura.Total, factura.Total_iva5, factura.Total_iva10, factura.Total_iva) &&
-                   IsTotalEnLetrasValid(factura.Total_letras);
-        }
+            private readonly FacturaRepository _facturaRepository;
 
-        private bool IsValidNumeroFactura(string numeroFactura)
-        {
-            return Regex.IsMatch(numeroFactura, @"^\d{3}-\d{3}-\d{6}$");
-        }
+            public ValidarFacturaFluente(FacturaRepository repositorio)
+            {
+                _facturaRepository = repositorio;
 
-        private bool AreTotalsValid(decimal total, decimal totalIva5, decimal totalIva10, decimal totalIva)
-        {
-            return total > 0 && totalIva5 >= 0 && totalIva10 >= 0 && totalIva >= 0;
-        }
+                RuleFor(factura => factura.Nro_Factura)
+                    .NotEmpty().WithMessage("El número de factura es obligatorio.")
+                    .Matches(@"^\d{3}-\d{3}-\d{6}$").WithMessage("El número de factura debe tener el formato 'NNN-NNN-NNNNNN'.");
 
-        private bool IsTotalEnLetrasValid(string totalEnLetras)
-        {
-            return !string.IsNullOrEmpty(totalEnLetras) && totalEnLetras.Length >= 6;
+                RuleFor(factura => factura.Total)
+                    .NotEmpty().WithMessage("El total de la factura es obligatorio.")
+                    .GreaterThan(0).WithMessage("El total de la factura debe ser mayor que cero.");
+
+                RuleFor(factura => factura.Total_iva5)
+                    .NotEmpty().WithMessage("El total del IVA 5% es obligatorio.")
+                    .GreaterThan(0).WithMessage("El total del IVA 5% debe ser mayor que cero.");
+
+                RuleFor(factura => factura.Total_iva10)
+                    .NotEmpty().WithMessage("El total del IVA 10% es obligatorio.")
+                    .GreaterThan(0).WithMessage("El total del IVA 10% debe ser mayor que cero.");
+
+                RuleFor(factura => factura.Total_iva)
+                    .NotEmpty().WithMessage("El total del IVA es obligatorio.")
+                    .GreaterThan(0).WithMessage("El total del IVA debe ser mayor que cero.");
+
+                RuleFor(factura => factura.Total_letras)
+                    .NotEmpty().WithMessage("El total en letras es obligatorio.")
+                    .MinimumLength(6).WithMessage("El total en letras debe tener al menos 6 caracteres.");
+            }
+
         }
     }
 }

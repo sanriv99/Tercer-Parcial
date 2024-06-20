@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
 using Repository.Repository;
-using Service.Services;
+using Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

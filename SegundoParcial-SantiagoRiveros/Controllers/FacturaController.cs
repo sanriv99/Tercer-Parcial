@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Repository.Models;
 using Repository.Repository;
-using Service.Services;
+using Services;
 
 namespace SegundoParcial_SantiagoRiveros.Controllers
 {
@@ -22,8 +22,12 @@ namespace SegundoParcial_SantiagoRiveros.Controllers
         [HttpPost("CrearFactura")]
         public IActionResult PostFactura([FromBody] FacturaModel factura)
         {
-            if (!_facturaService.ValidateFactura(factura))
-                return BadRequest("Los datos de la factura no son válidos.");
+            var controlador = new Services.FacturaService.ValidarFacturaFluente(_facturaRepository);
+            var result = controlador.Validate(factura);
+            if (!result.IsValid)
+            {
+                return BadRequest(result.Errors);
+            }
 
             _facturaRepository.AddFactura(factura);
             return Ok("Factura agregada correctamente.");
@@ -50,8 +54,13 @@ namespace SegundoParcial_SantiagoRiveros.Controllers
         [HttpPut("ActualizarFactura")]
         public IActionResult PutFactura([FromBody] FacturaModel factura)
         {
-            if (!_facturaService.ValidateFactura(factura))
-                return BadRequest("Los datos de la factura no son válidos.");
+            var controlador = new Services.FacturaService.ValidarFacturaFluente(_facturaRepository);
+            var result = controlador.Validate(factura);
+
+            if (!result.IsValid)
+            {
+                return BadRequest(result.Errors);
+            }
 
             _facturaRepository.UpdateFactura(factura);
             return Ok("Factura actualizada correctamente.");

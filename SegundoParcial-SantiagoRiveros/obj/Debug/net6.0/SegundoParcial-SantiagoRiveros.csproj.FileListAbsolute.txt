@@ -44,3 +44,7 @@ C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segun
 C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\SegundoParcial-SantiagoRiveros\obj\Debug\net6.0\SegundoParcial-SantiagoRiveros.pdb
 C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\SegundoParcial-SantiagoRiveros\obj\Debug\net6.0\SegundoParcial-SantiagoRiveros.genruntimeconfig.cache
 C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\SegundoParcial-SantiagoRiveros\obj\Debug\net6.0\ref\SegundoParcial-SantiagoRiveros.dll
+C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\SegundoParcial-SantiagoRiveros\obj\Debug\net6.0\SegundoParcial-SantiagoRiveros.sourcelink.json
+C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\SegundoParcial-SantiagoRiveros\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\SegundoParcial-SantiagoRiveros\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\Santiago R\Desktop\Santi\Ing. Informatica\9° Semestre\Optativo V\Segundo Parcial\SegundoParcial-SantiagoRiveros\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

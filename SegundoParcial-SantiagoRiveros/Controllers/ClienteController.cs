@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Repository.Models;
 using Repository.Repository;
-using Service.Services;
+using Services;
 
 namespace SegundoParcial_SantiagoRiveros.Controllers
 {
@@ -22,8 +22,13 @@ namespace SegundoParcial_SantiagoRiveros.Controllers
         [HttpPost("CrearCliente")]
         public IActionResult PostCliente([FromBody] ClienteModel cliente)
         {
-            if (!_clienteService.ValidateCliente(cliente))
-                return BadRequest("Los datos del cliente no son válidos.");
+            var controlador = new Services.ClienteService.ValidarClienteFluente(_clienteRepository);
+            var result = controlador.Validate(cliente);
+
+            if (!result.IsValid)
+            {
+                return BadRequest(result.Errors);
+            }
 
             _clienteRepository.AddCliente(cliente);
             return Ok("Cliente agregado correctamente.");
@@ -53,8 +58,13 @@ namespace SegundoParcial_SantiagoRiveros.Controllers
             if (existingCliente == null)
                 return NotFound("Cliente no encontrado.");
 
-            if (!_clienteService.ValidateCliente(cliente))
-                return BadRequest("Los datos del cliente no son válidos.");
+            var controlador = new Services.ClienteService.ValidarClienteFluente(_clienteRepository);
+            var result = controlador.Validate(cliente);
+
+            if (!result.IsValid)
+            {
+                return BadRequest(result.Errors);
+            }
 
             existingCliente.Nombre = cliente.Nombre;
             existingCliente.Apellido = cliente.Apellido;
